@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Manipulating_Layer_Hierarchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jm2-HS-eM6">
+                                <rect key="frame" x="20" y="60" width="335" height="250"/>
+                                <color key="backgroundColor" red="1" green="0.95887888669999999" blue="0.5814735231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="VtM-W0-bve"/>
+                                    <constraint firstAttribute="height" constant="250" id="Yjx-Q4-s2h"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iZ3-iZ-1vx">
+                                <rect key="frame" x="20" y="330" width="252" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikR-ti-xwn">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="30"/>
+                                        <state key="normal" title="Add Sublayer after Blue Layer"/>
+                                        <connections>
+                                            <action selector="addSublayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9m-37-uBO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZa-OM-Oz2">
+                                        <rect key="frame" x="0.0" y="40" width="252" height="30"/>
+                                        <state key="normal" title="Replace Blue Layer with Brown Layer"/>
+                                        <connections>
+                                            <action selector="replaceSublayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2L-WA-Bgm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7I-VJ-V4r">
+                                        <rect key="frame" x="0.0" y="80" width="124" height="30"/>
+                                        <state key="normal" title="Change z Position"/>
+                                        <connections>
+                                            <action selector="changezPositionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vXh-FI-yGw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIZ-nD-dhV">
+                                        <rect key="frame" x="0.0" y="120" width="39" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jfm-EM-jQh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iZ3-iZ-1vx" firstAttribute="leading" secondItem="jm2-HS-eM6" secondAttribute="leading" id="Did-uM-2UY"/>
+                            <constraint firstItem="jm2-HS-eM6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hou-gL-xvU"/>
+                            <constraint firstItem="iZ3-iZ-1vx" firstAttribute="top" secondItem="jm2-HS-eM6" secondAttribute="bottom" constant="20" id="OIn-En-kS0"/>
+                            <constraint firstItem="jm2-HS-eM6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="UQv-YZ-fnd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="jm2-HS-eM6" id="5yk-2c-rGG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

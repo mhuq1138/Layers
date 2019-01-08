@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Layer_Hierarchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQb-OZ-T8v">
+                                <rect key="frame" x="20" y="60" width="335" height="250"/>
+                                <color key="backgroundColor" red="1" green="0.95887888669999999" blue="0.5814735231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Pdy-aw-1dN"/>
+                                    <constraint firstAttribute="width" constant="335" id="kdJ-DY-agy"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="4kb-k1-y7o">
+                                <rect key="frame" x="32.5" y="350" width="310" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9M-jp-AMe">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="v9K-Tu-NBr"/>
+                                        </constraints>
+                                        <state key="normal" title="Create Hierachy">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createHierarchyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="weA-EI-0Xt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff7-ov-wwt">
+                                        <rect key="frame" x="175" y="0.0" width="135" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="JZc-ym-GEx"/>
+                                        </constraints>
+                                        <state key="normal" title="Change Hierachy">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeHierarchyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXD-73-uD7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ggL-BL-Z8H">
+                                <rect key="frame" x="32.5" y="400" width="310" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAX-NK-X7f">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="4bt-OT-bAg"/>
+                                        </constraints>
+                                        <state key="normal" title="Move Red Layer">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moveRedLayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Grq-xa-fzN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCi-DA-Fj0">
+                                        <rect key="frame" x="175" y="0.0" width="135" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="PMA-C5-dEJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Move Blue Layer">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moveBlueLayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sum-ZX-ShS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUi-xU-73G">
+                                <rect key="frame" x="292.5" y="450" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IYL-5C-o6h"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cg-xp-v16"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ggL-BL-Z8H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2HW-5p-TAh"/>
+                            <constraint firstItem="lQb-OZ-T8v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="GfH-9q-N4I"/>
+                            <constraint firstItem="EUi-xU-73G" firstAttribute="top" secondItem="ggL-BL-Z8H" secondAttribute="bottom" constant="20" id="Hy6-d8-sbh"/>
+                            <constraint firstItem="ggL-BL-Z8H" firstAttribute="top" secondItem="4kb-k1-y7o" secondAttribute="bottom" constant="20" id="QIQ-Jj-3XZ"/>
+                            <constraint firstItem="4kb-k1-y7o" firstAttribute="top" secondItem="lQb-OZ-T8v" secondAttribute="bottom" constant="40" id="UFy-di-WKN"/>
+                            <constraint firstItem="EUi-xU-73G" firstAttribute="trailing" secondItem="ggL-BL-Z8H" secondAttribute="trailing" id="cYY-69-9e8"/>
+                            <constraint firstItem="4kb-k1-y7o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nYk-LD-4k6"/>
+                            <constraint firstItem="lQb-OZ-T8v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="weo-HH-7sE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="lQb-OZ-T8v" id="OFb-5i-bCi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

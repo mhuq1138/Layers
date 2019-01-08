@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayerHierarchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRh-fu-JO2">
+                                <rect key="frame" x="20" y="50" width="335" height="250"/>
+                                <color key="backgroundColor" red="1" green="0.95887888669999999" blue="0.5814735231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6kA-50-dFc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me6-Q0-p6k">
+                                <rect key="frame" x="20" y="320" width="111" height="30"/>
+                                <state key="normal" title="Create Hierachy">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createHierarchyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsP-bI-1AN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjc-4O-abw">
+                                <rect key="frame" x="20" y="355" width="110" height="30"/>
+                                <state key="normal" title="Move Red Layer">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveRedLayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9JA-La-LgP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMR-1I-fcH">
+                                <rect key="frame" x="242" y="355" width="113" height="30"/>
+                                <state key="normal" title="Move Blue Layer">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveBlueLayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pL-lp-kS4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpz-ZI-Z23">
+                                <rect key="frame" x="237" y="320" width="118" height="30"/>
+                                <state key="normal" title="Change Hierachy">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeHierarchyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7US-jf-ZTN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wab-io-em9">
+                                <rect key="frame" x="316" y="390" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RY0-Lc-Rqf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Me6-Q0-p6k" firstAttribute="top" secondItem="jRh-fu-JO2" secondAttribute="bottom" constant="20" id="0zE-i0-joQ"/>
+                            <constraint firstItem="jRh-fu-JO2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2PE-h0-Q1B"/>
+                            <constraint firstItem="MMR-1I-fcH" firstAttribute="top" secondItem="hpz-ZI-Z23" secondAttribute="bottom" constant="5" id="3SD-YW-T9C"/>
+                            <constraint firstItem="Me6-Q0-p6k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="54c-F1-DdQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wab-io-em9" secondAttribute="trailing" constant="20" id="DXz-cJ-ZLi"/>
+                            <constraint firstItem="wab-io-em9" firstAttribute="top" secondItem="MMR-1I-fcH" secondAttribute="bottom" constant="5" id="G9N-xD-3ub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jRh-fu-JO2" secondAttribute="trailing" constant="20" id="KXt-fk-zCV"/>
+                            <constraint firstItem="jRh-fu-JO2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LJd-yQ-A6w"/>
+                            <constraint firstItem="Cjc-4O-abw" firstAttribute="top" secondItem="Me6-Q0-p6k" secondAttribute="bottom" constant="5" id="Pgw-t8-1ok"/>
+                            <constraint firstItem="Cjc-4O-abw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qnh-Rc-Ud8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MMR-1I-fcH" secondAttribute="trailing" constant="20" id="gJ7-i9-wAY"/>
+                            <constraint firstItem="hpz-ZI-Z23" firstAttribute="top" secondItem="jRh-fu-JO2" secondAttribute="bottom" constant="20" id="n6O-S0-Y52"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hpz-ZI-Z23" secondAttribute="trailing" constant="20" id="vSJ-Jb-HcO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="jRh-fu-JO2" id="PJ4-KY-SAX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
